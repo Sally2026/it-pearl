@@ -1,0 +1,47 @@
+/* Style for CSS-Demo*/
+/*
+Color Scheme:
+#A6035D
+#730240
+#400124
+#260115
+#0D0007
+*/
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+font-family: "Roboto", sans-serif;
+background-color: #A6035D;
+}
+
+main{
+background-color:#ffffff;
+width:80vw;
+/* long form */
+margin-top:40px;
+margin-right:auto;
+margin-bottom:40px;
+margin-left:auto;
+/* Top / Right / Bottom / Left */
+margin: 40px auto 40px auto;
+/* TOP/Bottom | LEFT/RIGTH */
+margin: 40px auto;
+border:4px solid #0D0007;
+border-radius:8px;
+}
+
+header.primary {
+background-color: #260115;
+padding: 20px;
+background-image: url("../img/CSS\ Demo.gif");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
