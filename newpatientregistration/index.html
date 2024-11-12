@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>New Patient Registration</title>
+</head>
+<body>
+    <h1>New Patient Registration</h1>
+    <p><strong>Please fill out the form below </strong></p>
+
+    <form action="https://brucebauer.info/assets/ITEC3650/datadump.php" method="post">
+        <label for="first-name"> <strong> First Name: </strong></label>
+        <input type="text" id="first-name" name="FirstName" size="30" maxlength="30"><br><br>
+
+        <label for="middle-initial"> <strong>Middle Initial: </strong></label>
+        <input type="text" id="middle-initial" name="MiddleInitial" size="1" maxlength="1"><br><br>
+
+        <label for="last-name"><strong>Last Name:</strong></label>
+        <input type="text" id="last-name" name="LastName" size="30" maxlength="30"><br><br>
+
+        <label for="email"><strong>Email:</strong></label>
+        <input type="email" id="email" name="Email" size="30" maxlength="30"><br><br>
+
+        <label><strong>Sex:</strong></label>
+        <input type="radio" id="male" name="Sex" value="M">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="Sex" value="F">
+        <label for="female">Female</label>
+        <input type="radio" id="na" name="Sex" value="N">
+        <label for="na">N/A</label><br><br>
+
+        <label for="birthday"><strong>Birthday:</strong></label>
+        <input type="text" id="birthday" name="Birthday" size="8" maxlength="10"><br><br>
+
+        <label for="height"><strong>Height (inches):</strong></label>
+        <input type="text" id="height" name="Height" size="3" maxlength="3"><br><br>
+
+        <label for="weight"><strong>Weight (pounds):</strong></label>
+        <input type="text" id="weight" name="Weight" size="3" maxlength="3"><br><br>
+        <hr>
+
+        <label for="phone-number"><strong>Phone Number:</strong></label>
+        <input type="tel" id="phone-number" name="PhoneNumber" size="14" maxlength="14"><br><br>
+
+        <label for="marital-status"><strong>Marital Status:</strong></label>
+        <select id="marital-status" name="MaritalStatus">
+            <option value="" disabled selected>Select a Status</option>
+            <option value="S">Single</option>
+            <option value="M">Married</option>
+            <option value="D">Divorced</option>
+            <option value="L">Legally Separated</option>
+            <option value="W">Widowed</option>
+        </select><br><br>
+
+        <label for="address"><strong>Address:</strong></label>
+        <input type="text" id="address" name="Address" size="30" maxlength="30"><br><br>
+
+        <label for="city"><strong>City:</strong></label>
+        <input type="text" id="city" name="City" size="30" maxlength="30"><br><br>
+
+        <label for="state"><strong>State:</strong></label>
+        <select id="state" name="State">
+            <option value="" disabled selected>Select a State</option>
+            <option value="AL">Alabama</option>
+            <option value="AK">Alaska</option>
+            <option value="AZ">Arizona</option>
+            <option value="AR">Arkansas</option>
+            <option value="CA">California</option>
+            <option value="CO">Colorado</option>
+            <option value="CT">Connecticut</option>
+            <option value="DE">Delaware</option>
+            <option value="FL">Florida</option>
+            <option value="GA">Georgia</option>
+            <option value="HI">Hawaii</option>
+            <option value="ID">Idaho</option>
+            <option value="IL">Illinois</option>
+            <option value="IN">Indiana</option>
+            <option value="IA">Iowa</option>
+            <option value="KS">Kansas</option>
+            <option value="KY">Kentucky</option>
+            <option value="LA">Louisiana</option>
+            <option value="ME">Maine</option>
+            <option value="MD">Maryland</option>
+            <option value="MA">Massachusetts</option>
+            <option value="MI">Michigan</option>
+            <option value="MN">Minnesota</option>
+            <option value="MS">Mississippi</option>
+            <option value="MO">Missouri</option>
+            <option value="MT">Montana</option>
+            <option value="NE">Nebraska</option>
+            <option value="NV">Nevada</option>
+            <option value="NH">New Hampshire</option>
+            <option value="NJ">New Jersey</option>
+            <option value="NM">New Mexico</option>
+            <option value="NY">New York</option>
+            <option value="NC">North Carolina</option>
+            <option value="ND">North Dakota</option>
+            <option value="OH">Ohio</option>
+            <option value="OK">Oklahoma</option>
+            <option value="OR">Oregon</option>
+            <option value="PA">Pennsylvania</option>
+            <option value="RI">Rhode Island</option>
+            <option value="SC">South Carolina</option>
+            <option value="SD">South Dakota</option>
+            <option value="TN">Tennessee</option>
+            <option value="TX">Texas</option>
+            <option value="UT">Utah</option>
+            <option value="VT">Vermont</option>
+            <option value="VA">Virginia</option>
+            <option value="WA">Washington</option>
+            <option value="WV">West Virginia</option>
+            <option value="WI">Wisconsin</option>
+            <option value="WY">Wyoming</option>
+        </select><br><br>
+
+        <label for="zip"><strong>Zip:</strong></label>
+        <input type="text" id="zip" name="Zip" size="5" maxlength="5"><br><br>
+        <hr>
+
+        <label><strong>Taking Medications:</strong></label>
+        <input type="radio" id="yes" name="Medications" value="Y">
+        <label for="yes">Yes</label>
+        <input type="radio" id="no" name="Medications" value="N">
+        <label for="no">No</label><br><br>
+
+        <label for="medications-list"><strong>If yes, list medications here:</strong></label><br>
+        <textarea id="medications-list" name="MedicationsList" rows="3" cols="30"></textarea><br><br>
+
+        <input type="submit" value="Submit Patient Form">
+    </form>
+</body>
+</html>
