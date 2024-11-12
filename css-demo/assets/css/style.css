@@ -16,6 +16,13 @@ html {
     box-sizing: inherit;
 }
 
+/*---------------- Utility Classes ----------------*/
+
+.container{
+    padding: 40px;
+    margin:auto;
+}
+
 body{
 font-family: "Roboto", sans-serif;
 background-color: #A6035D;
@@ -43,5 +50,71 @@ padding: 20px;
 background-image: url("../img/CSS\ Demo.gif");
 background-repeat: no-repeat;
 background-size: cover;
+display: flex;
+border-bottom: 3px solid #0D0007;
 }
+
+header.primary h1, header.primary h2{
+    margin:0;
+}
+
+header.primary h1 a{ 
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px #0000;
+}
+
+header.primary h2{
+    color: #ffffff;
+    text-shadow: 2px 2px #0000;
+}
+
+header.primary div.hgroup{
+    width:70%;
+}
+
+header.primary nav{
+    width: 30%;
+}
+
+header.primary nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header.primary nav ul li{
+    margin-bottom: 10px;
+}
+
+header.primary nav ul li a{
+    border: 1px solid #A6035D;
+    border-right: 10px solid #A6035D;
+    border-radius: 20px 0;
+    color: #ffffff;
+    display: block;
+    background-color:rgba(0,0,0,.6);
+    padding: 10px 10px 10px 0;
+    text-align: right;
+    transition: .5;
+    text-decoration: none;
+}
+
+header.primary nav a:hover{
+    background-color:rgba(0,0,0,1);
+    text-decoration: underline;
+}
+
+#content{
+    line-height:1.9rem;
+}
+
+#content h2, h3{
+    color: #0D0007;
+    border-left: 7.5px solid #A6035D;
+    padding:7.5px;
+    border-radius: 15px 0;
+}
+
 
