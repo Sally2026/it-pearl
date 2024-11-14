@@ -16,6 +16,10 @@ html {
     box-sizing: inherit;
 }
 
+img{
+    max-width: 100%;
+}
+
 /*---------------- Utility Classes ----------------*/
 
 .container{
@@ -98,6 +102,7 @@ header.primary nav ul li a{
     padding: 10px 10px 10px 0;
     text-align: right;
     transition: .5;
+    font-size: .9rem;
     text-decoration: none;
 }
 
@@ -110,11 +115,75 @@ header.primary nav a:hover{
     line-height:1.9rem;
 }
 
-#content h2, h3{
+#content h2, h3, article.widget h2{
     color: #0D0007;
     border-left: 7.5px solid #A6035D;
     padding:7.5px;
     border-radius: 15px 0;
 }
+
+#blog{
+    background-color:#e2a2c5 ;
+    padding: 20px 0;
+    border-top: 8px double #A6035D;
+    border-bottom: 8px double #A6035D;
+}
+
+#blog > h2{
+    text-shadow: 2px;
+    font-size: 2.2rem;
+    margin-left: 20px;
+}
+
+article.post{
+    background-color: #ffffff;
+    margin: 20px;
+    padding:20px;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "figure header"
+    "figure post-content"
+    "figure footer"
+}
+
+#blog article figure{
+    grid-area: figure;
+    margin: 0 20px 0 0;
+}
+
+#blog article header{
+    grid-area: header;
+}
+
+#blog article.post-content{
+    grid-area: post-content;
+}
+
+#blog article.post-meta{
+    grid-area: footer;
+}
+
+#blog article.post h2 a, a{
+    color: #A6035D;
+
+}
+
+aside .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+#colophon{
+    text-align: center;
+    background-image: url("../img/CSS\ Demo.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #ffffff;
+    padding: 5px;
+}
+
 
 
