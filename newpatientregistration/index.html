@@ -53,7 +53,7 @@
     
             <label class="formlabel" for="marital-status">Marital Status:</label>
             <select id="marital-status" name="MaritalStatus" data-rule-required="true" data-msg-required="Marital Status is Required">
-                <option value="" disabled selected>Select a Status</option>
+                <option value="" disabled selected>Select a Status...</option>
                 <option value="S">Single</option>
                 <option value="M">Married</option>
                 <option value="D">Divorced</option>
@@ -65,11 +65,9 @@
             <input type="text" id="address" name="Address" size="30" maxlength="30" data-rule-required="true" data-msg-required="Address is Required"><br>
     
             <label class="formlabel" for="city">City/State/Zip</label>
-            <input type="text" id="city" name="City" size="30" maxlength="30" data-rule-required="true" data-msg-required="City is Required"><br>
-    
-            <label class="formlabel" for="state">State:</label>
+            <input type="text" id="city" name="City" size="30" maxlength="30" data-rule-required="true" data-msg-required="City is Required">,
             <select id="state" name="State" data-rule-required="true" data-msg-required="State is Required">
-                <option value="" disabled selected>Select a State</option>
+                <option value="" disabled selected>Select a State...</option>
                 <option value="AL">Alabama</option>
                 <option value="AK">Alaska</option>
                 <option value="AZ">Arizona</option>
@@ -120,9 +118,7 @@
                 <option value="WV">West Virginia</option>
                 <option value="WI">Wisconsin</option>
                 <option value="WY">Wyoming</option>
-            </select><br>
-    
-            <label class="formlabel" for="zip">Zip:</label>
+            </select>
             <input type="text" id="zip" name="Zip" size="5" maxlength="5" data-rule-required="true" data-msg-required="Zipcode is Required" data-rule-digits="true" data-msg-digits="Enter 5 digits"><br>
             
         <hr>
