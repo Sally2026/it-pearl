@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Circle Calculations</title>
+    <meta charset ="utf-8"> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+
+<!-- The following should be a file in the "style" folder -->
+    <style>
+    .formlabel {
+        display: inline-block;
+        width: 200px;
+        text-align: right;
+        padding: 5px;
+        font-weight: bold;
+    }
+
+    .error {
+        color: red;
+        padding-left: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <form id="CircleForm" onsubmit="return false">
+        <h2>Circle Calculations</h2>
+        <label for="radius" class="formlabel">Enter radius of a circle:</label>
+        <input type="text" id="radius" name="radius"
+               data-rule-required="true"  data-msg-required="Radius is Required" 
+               data-rule-number="true" data-msg-number="Radius must be floating point number"
+               data-rule-min="0" data-msg-min="Radius must be greater than zero">
+        <label for="radius" class="error" id="radiuserror"></label>
+        <br>
+        
+        <label class="formlabel">Diameter:</label><span id="diameter"></span><br>
+        <label class="formlabel">Circumference:</label><span id="circumference"></span><br>
+        <label class="formlabel">Area:</label><span id="area"></span><br>
+        <br><br>
+        <input type="submit" value="Calculate" id="btnSubmitCalculate">
+        <input type="submit" value="Clear" id="btnSubmitClear">
+    </form>
+<script>
+$( "#CircleForm" ).validate({
+
+});
+</script>
+</body>
+</html>
