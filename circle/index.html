@@ -6,24 +6,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script>
+    <script src="assets/js/script.js"></script> 
+    <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- The following should be a file in the "style" folder -->
-    <style>
-    .formlabel {
-        display: inline-block;
-        width: 200px;
-        text-align: right;
-        padding: 5px;
-        font-weight: bold;
-    }
-
-    .error {
-        color: red;
-        padding-left: 5px;
-    }
-    </style>
 </head>
-
 <body>
     <form id="CircleForm" onsubmit="return false">
         <h2>Circle Calculations</h2>
@@ -42,10 +28,5 @@
         <input type="submit" value="Calculate" id="btnSubmitCalculate">
         <input type="submit" value="Clear" id="btnSubmitClear">
     </form>
-<script>
-$( "#CircleForm" ).validate({
-
-});
-</script>
 </body>
 </html>

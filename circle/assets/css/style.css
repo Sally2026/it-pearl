@@ -1,0 +1,13 @@
+/* The following should be a file in the "style" folder */
+.formlabel {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.error {
+    color: red;
+    padding-left: 5px;
+}
