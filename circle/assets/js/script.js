@@ -1,63 +1,32 @@
-$(document).ready(function() {
-    // Initialize jQuery Validation
-    $("#CircleForm").validate({
-        rules: {
-            radius: {
-                required: true,
-                number: true,
-                min: 0.01
-            }
-        },
-        messages: {
-            radius: {
-                required: "Radius is required.",
-                number: "Radius must be a floating-point number.",
-                min: "Radius must be greater than zero."
-            }
-        }
-    });
+"use strict";
+$( "#CircleForm" ).validate({
 
-
- // When the "Calculate" button is clicked
- $("#btnSubmitCalculate").click(function () {
-    if ($("#CircleForm").valid()) {
-        let radius = parseFloat($("#radius").val()); // Convert input to floating-point number
-        
-        let diameter = calcDiameter(radius);
-        let circumference = calcCircumference(radius);
-        let area = calcArea(radius);
-        
-        $("#diameter").text(diameter.toFixed(2));
-        $("#circumference").text(circumference.toFixed(2));
-        $("#area").text(area.toFixed(2));
-        }
-    });
 });
 
-// Function to calculate diameter
-function calcDiameter(radius) {
-    return 2 * radius; // Diameter = 2 * Radius
-}
+function CircleCalculations() {
+    if ($("#CircleForm").valid()) {
+        let radius;
+        let diameter;
+        let circumference;
+        let radiusfp;
+        radius = document.getElementById("radius").value;
+        radiusfp = parseFloat(radius);
 
-// Function to calculate circumference
-function calcCircumference(radius) {
-    return 2 * Math.PI * radius; // Circumference = 2 * π * Radius
-}
+        diameter = calculateDiameter(radiusfp);
+        document.getElementById("diameter").innerHTML = diameter;
 
-// Function to calculate area
-function calcArea(radius) {
-    return Math.PI * radius * radius; // Area = π * Radius²
-}
-
-// When the "Clear" button is clicked
-    $("#btnSubmitClear").click(function(){
-        clearForm();
-    });
-
-// Function to clear the form
-    function clearForm() {
-        $("#radius").val("");
-        $("#diameter").text("");
-        $("#circumference").text("");
-        $("#area").text("");
+        circumference = calculateCircumference(radiusfp);
+        document.getElementById("circumference").innerHTML = circumference;
+        let x = 1;
     }
+}
+
+function calculateDiameter(r) {
+    return 2 * r;
+
+}
+
+function calculateCircumference(r) {
+    return 2 * Math.PI * r;
+    
+}

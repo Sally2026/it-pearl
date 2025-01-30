@@ -31,38 +31,41 @@
       margin-right: auto;
       margin-left: auto;
       text-shadow: 2px 2px #000;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
       padding: 20px;
-      gap: 20px;
     }
     #navy {
       background-color: #001f3f;
-      width: 370px;
-      height: 125px;
+      width: 175px;
+      height: 140px;
+      margin: 0 0 20px 20px;
       
     }
     #teal {
       background-color: #39CCCC;
-      width: 370px;
-      height: 125px;
-      
+      width: 175px;
+      height: 140px;
+      margin: 0 0 20px 20px;
     }
     #blue {
       background-color: #0074D9;
-      width: 370px;
-      height: 125px;
-      
+      width: 175px;
+      height: 140px;
+      margin: 0 0 20px 20px;
     }
     #aqua {
       background-color: #7FDBFF;
-      width: 370px;
-      height: 125px;
-      
+      width: 175px;
+      height: 140px;
+      margin: 0 0 20px 20px;
     }
     #footer {
       background-color: #666;
-      grid-column: span 2;  
+      align-self: flex-end;
+      flex-direction: column;
+      
     }
     h1 {
       color: #000;
