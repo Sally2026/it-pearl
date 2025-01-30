@@ -1,7 +1,22 @@
 $(document).ready(function() {
     // Initialize jQuery Validation
     $("#CircleForm").validate({
+        rules: {
+            radius: {
+                required: true,
+                number: true,
+                min: 0.01
+            }
+        },
+        messages: {
+            radius: {
+                required: "Radius is required.",
+                number: "Radius must be a floating-point number.",
+                min: "Radius must be greater than zero."
+            }
+        }
     });
+
 
  // When the "Calculate" button is clicked
  $("#btnSubmitCalculate").click(function () {
