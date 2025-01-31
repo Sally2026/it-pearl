@@ -8,6 +8,7 @@ function CircleCalculations() {
         let radius;
         let diameter;
         let circumference;
+        let area;
         let radiusfp;
         radius = document.getElementById("radius").value;
         radiusfp = parseFloat(radius);
@@ -17,7 +18,10 @@ function CircleCalculations() {
 
         circumference = calculateCircumference(radiusfp);
         document.getElementById("circumference").innerHTML = circumference;
-        let x = 1;
+
+        area = calculateArea(radiusfp);
+        document.getElementById("area").innerHTML = area;
+        
     }
 }
 
@@ -29,4 +33,15 @@ function calculateDiameter(r) {
 function calculateCircumference(r) {
     return 2 * Math.PI * r;
     
+}
+
+function calculateArea(r) {
+    return Math.PI * r * r;
+}
+
+function ClearForm() {
+    document.getElementById("CircleForm").reset();
+    document.getElementById("diameter").innerHTML = "";
+    document.getElementById("circumference").innerHTML = "";
+    document.getElementById("area").innerHTML = "";
 }
