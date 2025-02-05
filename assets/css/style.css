@@ -34,6 +34,14 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   margin:auto;
 }
 
+.container figure img{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50px;
+  right: 720px;
+}
+
 main{
   background-color: #ffffff;
   width: 80vw;
@@ -72,9 +80,12 @@ main{
   color: #ec1991;
 }
 
-footer img{
-  align-items: right;
-
+footer figure img{
+  width: 120px;
+  height: 120px;
+  float: right;
+  margin-top: -100px;
+  margin-right: -50px;
 }
 
 
