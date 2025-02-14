@@ -1,66 +1,108 @@
 function calculate() {
     "use strict";
-    /* Make sure that the form is valid */
-    if ($("#myform").valid()) {
-      /* get the operands from the form */
-      let operand1 = document.getElementById("Operand1").value;
-      let operand2 = document.getElementById("Operand2").value;
-  
-      /* convert the operands from string to floating point */
-      let operand1fp = parseFloat(operand1);
-      let operand2fp = parseFloat(operand2);
-  
-      /* figure out which operator was checked and place the value in operator */
-      let operator;
-      if (document.getElementById("AddOperator").checked) {
-        operator = "Add";
-      }
-      if (document.getElementById("SubOperator").checked) {
-        operator = "Sub";
-      }
-      if (document.getElementById("MultOperator").checked) {
-        operator = "Mult";
-      }
-      if (document.getElementById("DivOperator").checked) {
-        operator = "Div";
-      }
-  
-      let result;
-  
-      /* if the operator was "Add" then Add two Operand */
-      if (operator == "Add") {
-        result = operand1fp + operand2fp;
-      } else if (operator == "Sub") {
-        /* if the operator was "Sub" then subtract */
-        result = operand1fp - operand2fp;
-      } else if (operator == "Mult") {
-        /* if the operator was "Mult" then multiply */
-        result = operand1fp * operand2fp;
-      } else if (operator == "Div") {
-        /* if the operator was "Div" then divide */
-        result = operand1fp / operand2fp;
-      }
-  
-      /* convert the result to a string and display it */
-      document.getElementById("Result").innerHTML = result.toString();
+
+    // Get a reference to the form using jQuery
+    let form = $("#myform");
+
+    // If all form elements are valid, get the form values
+    if (form.valid()) {
+        
+        // From Value
+        let FromValue = document.getElementById("FormValue").value;
+
+        // From Unit
+        let FromUnit = "";
+        if (document.getElementById("cm").checked) {
+            FromUnit = document.getElementById("cm").value;
+        }
+        if (document.getElementById("m").checked) {
+            FromUnit = document.getElementById("m").value;
+        }
+        if (document.getElementById("km").checked) {
+            FromUnit = document.getElementById("km").value;
+        }
+        if (document.getElementById("in").checked) {
+            FromUnit = document.getElementById("in").value;
+        }
+        if (document.getElementById("ft").checked) {
+            FromUnit = document.getElementById("ft").value;
+        }
+        if (document.getElementById("yd").checked) {
+            FromUnit = document.getElementById("yd").value;
+        }
+        if (document.getElementById("mi").checked) {
+            FromUnit = document.getElementById("mi").value;
+        }
+
+        // To Unit
+        let ToUnit = "";
+        if (document.getElementById("tocm").checked) {
+            ToUnit = document.getElementById("tocm").value;
+        }
+        if (document.getElementById("tom").checked) {
+            ToUnit = document.getElementById("tom").value;
+        }
+        if (document.getElementById("tokm").checked) {
+            ToUnit = document.getElementById("tokm").value;
+        }
+        if (document.getElementById("toin").checked) {
+            ToUnit = document.getElementById("toin").value;
+        }
+        if (document.getElementById("toft").checked) {
+            ToUnit = document.getElementById("toft").value;
+        }
+        if (document.getElementById("toyd").checked) {
+            ToUnit = document.getElementById("toyd").value;
+        }
+        if (document.getElementById("tomi").checked) {
+            ToUnit = document.getElementById("tomi").value;
+        }
+
+        ConvertUnits(FromValue, FromUnit, ToUnit);
     }
-  }
-  
-  function clearform() {
-    /* Set all of the form values to blank or false */
-    document.getElementById("Operand1").value = "";
-    document.getElementById("Operand2").value = "";
-    document.getElementById("Operand1Error").innerHTML = "";
-    document.getElementById("Operand2Error").innerHTML = "";
-    document.getElementById("OperatorError").innerHTML = "";
-    document.getElementById("AddOperator").checked = false;
-    document.getElementById("SubOperator").checked = false;
-    document.getElementById("MultOperator").checked = false;
-    document.getElementById("DivOperator").checked = false;
-    document.getElementById("Result").innerHTML = "";
-  }
-  
-  /* Form Validation */
-  $("#myform").validate({
-    
-  });
+}
+
+async function ConvertUnits(FromValue, FromUnit, ToUnit) {
+    "use strict";
+
+    // URL and method used with AJAX Call
+    let myURL = "https://brucebauer.info/assets/ITEC3650/unitsconversion.php";
+    myURL = myURL + "?FromValue=" + encodeURIComponent(FromValue) + "&FromUnit=" + encodeURIComponent(FromUnit) + "&ToUnit=" + encodeURIComponent(ToUnit);
+
+    /* fetch the results */
+    let response = await fetch(myURL);
+    let result = await response.json();
+
+    document.getElementById("ToValue").innerHTML = result.ToValue;
+}
+
+function clearform() {
+    "use strict";
+
+    // Set all of the form values to blank or false
+    document.getElementById("FormValue").value = "";
+
+    // Uncheck all "From Unit" radio buttons
+    document.getElementById("cm").checked = false;
+    document.getElementById("m").checked = false;
+    document.getElementById("km").checked = false;
+    document.getElementById("in").checked = false;
+    document.getElementById("ft").checked = false;
+    document.getElementById("yd").checked = false;
+    document.getElementById("mi").checked = false;
+
+    // Uncheck all "To Unit" radio buttons
+    document.getElementById("tocm").checked = false;
+    document.getElementById("tom").checked = false;
+    document.getElementById("tokm").checked = false;
+    document.getElementById("toin").checked = false;
+    document.getElementById("toft").checked = false;
+    document.getElementById("toyd").checked = false;
+    document.getElementById("tomi").checked = false;
+
+    // Clear the output value
+    document.getElementById("ToValue").innerHTML = "";
+}
+
+// Initialize jQuery form validation
+$("#myform").validate({});
