@@ -1,0 +1,31 @@
+html {
+    box-sizing: border-box;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+header, #primary{
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #9cb1e7;
+    margin: 0;
+    padding: 0%;
+  }
+  
+  
+  header nav ul{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:20px;
+  }
+
+  #secondary{
+    display:flex;
+    justify-content: space-around;
+    background: #d9e1f4;
+  }
