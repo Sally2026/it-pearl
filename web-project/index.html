@@ -8,30 +8,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
     <title>Web Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
-        <header id="primary">
+        <header class="primary">
             <figure>
                 <img src="assets/img/logo-1.png" alt="Central Park" width="100"> 
             </figure>
-            <nav>
+            <nav class="primary">
               <ul>
-                <li> Home </li>
-                <li> Things to Do </li>
-                <li> Q&A's </li>
-                <li> Contact </li>
-                <li> Weather </li>
+                <li><a href="index.html"> <strong> Home </strong> </a></li>
+                <li><a href="index.html"> <strong> Things to Do </strong></a></li>
+                <li><a href="index.html"> <strong> FAQ </strong></a></li>
+                <li><a href="index.html"> <strong> Contact </strong></a></li>
+                <li><a href="index.html"> <strong> Weather </strong></a></li>
               </ul>
             </nav>
         </header>
-        <section id="secondary">
-            <video controls width="800">
+        <section id="secondary" class="container">
+            <video controls width="600">
                 <source src="assets/img/video-2.mp4">
             </video>
         </section>
-        <section id="content">
-            <h2> Welcome to Central Park </h2>
+        <section id="content" class="container">
+            <h2> Central Park Brief History</h2>
             <p> Central Park is an urban park in New York City located between the Upper West and Upper East Sides of Manhattan. It is the fifth-largest park in the city by area, covering 843 acres (341 ha). It is the most visited urban park in the United States with an estimated 42 million visitors annually as of 2016, and is the most filmed location in the world. </p>
         </section>
         <footer>
