@@ -73,7 +73,7 @@ async function ConvertUnits(FromValue, FromUnit, ToUnit) {
     let response = await fetch(myURL);
     let result = await response.json();
 
-    document.getElementById("ToValue").innerHTML = result.ToValue;
+    document.getElementById("ToValue").innerHTML = result;
 }
 
 function clearform() {
