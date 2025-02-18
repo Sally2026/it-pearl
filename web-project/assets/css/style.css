@@ -59,6 +59,12 @@ header.primary {
   padding: auto;
 }
 
+header.primary img{
+  height: 80px;
+  margin: 0;
+  padding: 0;
+} 
+
 header.primary nav ul {
   display: flex;
   flex-direction: row;
@@ -81,7 +87,7 @@ header.primary ul li a {
 }
 
 header.primary ul li a:hover {
-  background-color: rgba(239, 239, 239, 0.4);
+  background-color: #faf7de;
 }
 
 #content {
@@ -94,7 +100,6 @@ header.primary ul li a:hover {
 #blog {
   grid-column: 1 / 2; 
   grid-row: 1/ 2;
-  padding: 20px;
   border-radius: 10px;
 }
 
@@ -107,11 +112,35 @@ header.primary ul li a:hover {
   width: 100%;
   height: auto;
   border-radius: 10px;
+  border: 3px solid #000000;
+}
+
+#post{
+  grid-column: 1/4;
 }
 
 
-footer {
+footer#bottom{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   background: #b5d9a0;
+  height: 80px;
+}
+
+footer#bottom h6{
   text-align: center;
-  padding: 10px;
+  margin: 35px;
+}
+
+footer#bottom h6 a{
+  color: #000000;
+}
+
+
+footer#bottom img{
+  width: 55px;
+  margin: 0px;
+  padding: 0px;
+  
 }
