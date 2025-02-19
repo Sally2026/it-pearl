@@ -88,4 +88,31 @@ footer figure img{
   margin-right: -50px;
 }
 
+@media screen and (max-width:620px){
+  .container figure img{
+      position:absolute;
+      right: 330px;
+      top:50px;
+  }
 
+  .container h2{
+    font-size: 1.3rem;
+  }
+
+}
+
+@media screen and (max-width:820px){
+  .container figure img{
+    position:absolute;
+    right: 400px;
+    top:50px;
+  }
+}
+
+@media screen and (min-width:1600px){
+  main{
+    width:80vw;
+  }
+
+  
+}
