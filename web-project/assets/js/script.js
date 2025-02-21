@@ -1,12 +1,21 @@
-$(document).ready(function() {
-  $('.widget').slick({
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      slide:'div',    
-      cssEase: 'linear',
-      autoplay: true,
-      autoplaySpeed: 2000
-  });
+document.addEventListener('DOMContentLoaded', function () {
+  let slideIndex = 0;
+  const slides = document.querySelectorAll(".slide");
+
+  function showSlides() {
+    // Hide all slides first
+    slides.forEach(slide => slide.style.display = "none");
+    
+    // Increment slideIndex, loop back to 0 if it exceeds the length
+    slideIndex = (slideIndex + 1) % slides.length;
+
+    // Display the current slide
+    slides[slideIndex].style.display = "block";
+  }
+
+  // Initially display the first slide
+  showSlides();
+
+  // Set interval to change slides every 3 seconds (3000 ms)
+  setInterval(showSlides, 6000);
 });
