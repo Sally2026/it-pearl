@@ -124,7 +124,6 @@ header.primary ul li a:hover {
 }
 
 article.widget img{
-  display: block;
   grid-column: 1 / 2;
   grid-row: auto;
   margin: 0 auto;
