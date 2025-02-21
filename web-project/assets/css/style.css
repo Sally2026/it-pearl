@@ -55,12 +55,12 @@ header.primary {
   align-items: center;
   justify-content: space-around;
   background: #b5d9a0;
-  margin: auto;
-  padding: auto;
+  margin: 0px;
+  padding: 0px;
 }
 
 header.primary img{
-  height: 80px;
+  height: 90px;
   margin: 0;
   padding: 0;
 } 
@@ -119,12 +119,26 @@ header.primary ul li a:hover {
   grid-column: 1/4;
 }
 
+#aside{
+  grid-column: 2 /3;
+}
+
+article.widget img{
+  grid-column: 1 /2 ;
+  margin: 0 auto;
+  max-width:100%;
+  height:auto;
+  border-radius: 10px;
+  border: 3px solid #000000;
+}
+
 
 footer#bottom{
   display:flex;
   flex-direction: row;
   justify-content: space-evenly;
   background: #b5d9a0;
+  margin: 0px;
   height: 80px;
 }
 
