@@ -90,6 +90,8 @@ header.primary ul li a:hover {
   background-color: #faf7de;
 }
 
+/*  --------------- Content -----------------  */
+
 #content {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -100,7 +102,6 @@ header.primary ul li a:hover {
 #blog {
   grid-column: 1 / 2; 
   grid-row: 1/ 2;
-  border-radius: 10px;
 }
 
 
@@ -118,6 +119,8 @@ header.primary ul li a:hover {
 #post{
   grid-column: 1/4;
 }
+
+/*  --------------- Aside -----------------  */
 
 #aside{
   grid-column: 2 /3;
@@ -137,6 +140,15 @@ header.primary ul li a:hover {
   border: 3px solid #000;
 }
 
+#right-side{
+  grid-column: 2 / 3;
+}
+
+#left-side{
+  grid-column: 1 / 2;
+}
+
+/*  --------------- Footer -----------------  */
 
 footer#bottom{
   display:flex;
