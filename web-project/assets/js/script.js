@@ -19,3 +19,33 @@ document.addEventListener('DOMContentLoaded', function () {
   // Set interval to change slides every 3 seconds (3000 ms)
   setInterval(showSlides, 6000);
 });
+
+$(document).ready(function() {
+  $('.slider').slick({
+      centerMode: true,
+      centerPadding: '60px',
+      slidesToShow: 3,
+      responsive: [
+          {
+              breakpoint: 768,
+              settings: {
+                  arrows: false,
+                  dots: true,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 2
+              }
+          },
+          {
+              breakpoint: 480,
+              settings: {
+                  arrows: false,
+                  dots: true,
+                  centerMode: true,
+                  centerPadding: '40px',
+                  slidesToShow: 1
+              }
+          }
+      ]
+  });
+});
