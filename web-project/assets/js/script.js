@@ -1,22 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   let slideIndex = 0;
-  const slides = document.querySelectorAll(".slide");
+  let slides = document.getElementsByClassName("slide");
 
   function showSlides() {
-    // Hide all slides first
-    slides.forEach(slide => slide.style.display = "none");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
     
-    // Increment slideIndex, loop back to 0 if it exceeds the length
-    slideIndex = (slideIndex + 1) % slides.length;
-
-    // Display the current slide
+    slideIndex++;
+    if (slideIndex >= slides.length) {
+      slideIndex = 0;
+    }
+    
     slides[slideIndex].style.display = "block";
   }
 
-  // Initially display the first slide
   showSlides();
-
-  // Set interval to change slides every 3 seconds (3000 ms)
   setInterval(showSlides, 5000);
 });
 
