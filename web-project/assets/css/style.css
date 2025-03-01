@@ -201,7 +201,7 @@ footer#bottom{
 
 footer#bottom h6{
   text-align: center;
-  margin: 25px;
+  margin: 20px;
 }
 
 footer#bottom h6 a{
@@ -254,10 +254,12 @@ footer#bottom img{
     
   }
 
-  
-
-  
-
+  footer#bottom h6{
+    margin: 15px;
+  }
   
 }
+
+
+
   
