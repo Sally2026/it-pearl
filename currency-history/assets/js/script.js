@@ -1,3 +1,7 @@
+$(document).ready(function() {
+    $("#DisplayCurrency").click(GetCurrency);
+});
+
 async function GetCurrency() {
     "use strict";
 
@@ -15,30 +19,53 @@ async function GetCurrency() {
  
         /* URL for AJAX Call */
         let myURL = `https://api.polygon.io/v2/aggs/ticker/C:${BaseCurrency}${ConvertCurrency}/range/1/day/${FromDate}/${ToDate}?apiKey=${apiKey}`;
-        
+        let response = await fetch(myURL);
 
-                let ctx0 = document.getElementById("chartjs-0");
-                let myChart0 = new Chart(ctx0, {
-                    "type":"line",
-                    "data": {
-                        "labels": ,
-                        "datasets":[{"label":"Stock Close",
-                        "data": ,
-                        "fill":false,
-                        "borderColor":"rgb(75, 192, 192)",
-                        "lineTension":0.1}]},
-                        "options":{ 
-                            responsive: false,
-                            maintainAspectRatio: true,
-                        }
+            /* Check the status */
+            if (response.ok) {            
+                let responseText = await response.text();
+                // Parse the JSON string into an object
+                let data = JSON.parse(responseText);
+
+                /* Ensure response contains results */
+                if (!data.results || data.results.length === 0) {
+                    alert("No currency data found for the selected dates.");
+                    return;
+                }
+
+                /* Prepare data for Chart.js */
+                let labels = [];
+                let dataPoints = [];
+
+                data.results.forEach(item => {
+                    labels.push(new Date(item.t).toLocaleDateString());
+                    dataPoints.push(item.c);
+                });
+    
+            let ctx0 = document.getElementById("chartjs-0");
+            let myChart0 = new Chart(ctx0, {
+                type: "line",
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: "Stock Close",
+                        data: dataPoints,
+                        fill: false,
+                        borderColor: "rgb(75, 192, 192)",
+                        lineTension: 0.1
+                    }]
+                },
+                "options":{ 
+                    responsive: false,
+                    maintainAspectRatio: true,
                     }
-                );
+                }
+            );
                 
 
-        else {
-            /* AJAX completed with error - probably invalid stock ticker symbol */
-            alert("Currency Not Found - Status: " + msg2Object.status)
-            return
+        } else {
+            /* Handle errors - invalid request */
+            alert("Currency data not found! Status: " + response.status);
         }
     }
 }
@@ -48,7 +75,7 @@ function ClearForm() {
 
     document.getElementById("BaseCurrency").value = "";
     document.getElementById("BaseCurrencyError").innerHTML = "";
-  document.getElementById("ConvertCurrency").value = "";
+    document.getElementById("ConvertCurrency").value = "";
     document.getElementById("ConvertCurrencyError").innerHTML = "";
   
     document.getElementById("FromDate").value = "";
@@ -61,7 +88,4 @@ function ClearForm() {
     let canvas0 = document.getElementById("chartjs-0");
     let context0 = canvas0.getContext('2d');    
     context0.clearRect(0, 0, canvas0.width, canvas0.height);
-    let canvas1 = document.getElementById("chartjs-1");
-    let context1 = canvas1.getContext('2d');    
-    context1.clearRect(0, 0, canvas1.width, canvas1.height);
 }

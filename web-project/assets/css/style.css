@@ -20,29 +20,7 @@ html {
   margin: 20px auto;
 }
 
-.img-right {
-  float: right;
-  margin: 20px auto;
-  border: 1px solid gray;
-  padding: 5px;
-  border-radius: 50px;
-}
 
-.img-left {
-  float: left;
-  margin: 20px auto;
-  border: 1px solid gray;
-  padding: 5px;
-  border-radius: 50px;
-}
-
-.img-center {
-  display: block;
-  margin: 20px auto;
-  border: 1px solid gray;
-  padding: 5px;
-  border-radius: 50px;
-}
 
 /*  ---------------Global Styles-----------------  */
 body {
@@ -89,6 +67,22 @@ header.primary ul li a {
 header.primary ul li a:hover {
   background-color: #a1a1a1;
 }
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: #000000;
+}
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+
 
 /*  --------------- Content -----------------  */
 
@@ -224,7 +218,28 @@ footer#bottom img{
   }
 
   header.primary nav ul {
+    display: none; /* Hide menu by default */
     flex-direction: column;
+    background: #b5d9a0;
+    position: absolute;
+    top: 115px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 10px;
+  }
+
+  header.primary nav ul.active {
+    display: flex; /* Show when active */
+  }
+
+  .nav-links li {
+    padding: 5px 10px;
+  }
+
+  .hamburger {
+    display: block;
+    color: #000000; /* Show hamburger icon */
   }
 
 
@@ -241,8 +256,17 @@ footer#bottom img{
     grid-column: 1 / 2; 
   }
 
+  #left-side{
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    gap: 0px;
+  }
+
   #aside {
     grid-column: 1 / 2;
+    gap: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
   }
 
   #slideshow {
@@ -251,11 +275,11 @@ footer#bottom img{
 
   .slider img {
     width: 60%;
-    
+    margin-left: 140px;    
   }
 
   footer#bottom h6{
-    margin: 15px;
+    margin: 20px;
   }
   
 }

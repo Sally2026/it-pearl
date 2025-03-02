@@ -17,7 +17,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
   showSlides();
   setInterval(showSlides, 5000);
+
 });
+
+function toggleMenu() {
+  document.querySelector(".nav-links").classList.toggle("active");
+}
+
+
 
 $(document).ready(function() {
   $('.slider').slick({

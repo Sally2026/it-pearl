@@ -9,13 +9,13 @@
   <meta name="author" content="Sally Alazab">
   <title> Polygon - Curreny History</title>
   <link rel="stylesheet" href="assets/css/style.css">
-  <script src="assets/js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script> <script>src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/additional-methods.min.js"></script> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  <script src="assets/js/script.js"></script>
   
 </head>
-
 <body>
   <main>
     <form id="myform" onsubmit="return false">
@@ -23,7 +23,6 @@
         <h2> Currency Value History </h2>
         <label for="BaseCurrency" class="formlabel"> Base Currency: </label>
         <select id="BaseCurrency" name="BaseCurrency" data-rule-required="true" data-msg-required="Base Currency is Required">
-          <option value="" disabled selected> Select an Currency...</option>
           <option value="" disabled selected>Select a Currency...</option>
           <option value="USD">US Dollars</option>
           <option value="AED">UAE Dirham</option>
@@ -56,12 +55,11 @@
         <br><br>
 
         <input type="button" value="Show Results" id="DisplayCurrency"></b>
-        <input type="button" formnovalidate value="Clear" id="Clear" name="Clear" onclick="Clearform();">
+        <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
         <hr>
       </div>
     </form>
    <canvas id="chartjs-0"></canvas>
   </main>
 </body>
-
 </html>
