@@ -59,13 +59,13 @@ header.primary ul li a {
   text-decoration: none;
   border: 3px solid #000000;
   padding: 2.5px 10px;
-  border-radius: 10px 10px 0px 10px;
+  border-radius: 0px 10px 0px 10px;
   background-color: #ffffff;
   transition: 0.4s;
 }
 
-header.primary ul li a:hover {
-  background-color: #a1a1a1;
+header.primary a:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0,0,0, .6);
 }
 
 .navbar {
@@ -279,7 +279,7 @@ footer#bottom img{
   }
 
   footer#bottom h6{
-    margin: 10px;
+    margin: 12px;
   }
   
 }

@@ -21,6 +21,19 @@
   padding: 20px;
 }
 
+#chart-container {
+  width: 500px;
+  height: 400px;
+}
+
+canvas{
+  width: 600px;
+  height: 400px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+
 .clearfix::after {
   content: "";
   clear: both;
