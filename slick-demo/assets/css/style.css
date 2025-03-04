@@ -1,0 +1,16 @@
+.fade-container{
+    margin:90px auto;
+    width:70vw;
+    /* Set Max Content Width */
+    max-width:700px;
+    box-shadow: 0  0 5px 5px  rgba(0,0,0,0.1);
+    background: rgb(239, 179, 199);
+}
+
+.card{
+    height:300px;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    padding:2rem;
+    
+}
