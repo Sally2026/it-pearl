@@ -26,6 +26,7 @@ function toggleMenu() {
 
 
 
+
 $(document).ready(function() {
   $('.slider').slick({
     centerMode: true,
