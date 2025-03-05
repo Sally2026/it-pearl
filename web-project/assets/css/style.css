@@ -39,9 +39,12 @@ header.primary {
 
 header.primary img{
   height: 90px;
-  margin: 0;
-  padding: 0;
 } 
+
+header.primary figure {
+  margin: 0;               
+  padding: 0;
+}
 
 header.primary nav ul {
   display: flex;
@@ -222,7 +225,7 @@ footer#bottom img{
     flex-direction: column;
     background: #b5d9a0;
     position: absolute;
-    top: 115px;
+    top: 80px;
     right: 0;
     width: 100%;
     text-align: center;

@@ -1,10 +1,17 @@
+header{
+    color: #000000;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 2rem;
+}
+
 .fade-container{
-    margin:90px auto;
-    width:70vw;
+    margin:40px auto;
+    width:90vw;
     /* Set Max Content Width */
     max-width:700px;
     box-shadow: 0  0 5px 5px  rgba(0,0,0,0.1);
-    background: rgb(239, 179, 199);
+    background: rgba(228, 96, 140, 0.365);
 }
 
 .card{
