@@ -3,7 +3,7 @@ $(document).ready(function () {
     $("#Clear").click(ClearForm);
 });
 
-let myChart0; // Declare globally so we can destroy it later
+let myChart0; 
 
 async function GetCurrency() {
     "use strict";
@@ -94,8 +94,8 @@ function ClearForm() {
     $("#ConvertCurrency").val("");
     $("#FromDate").val("");
     $("#ToDate").val("");
+    
 
-    // Destroy chart if it exists
     if (myChart0) {
         myChart0.destroy();
         myChart0 = null;

@@ -39,7 +39,15 @@
       </nav>
     </header>
     <section id="content" class="container">
-  
+      <form id="myform">
+        <div class="formcontainer">
+          <h1> Location Temperture  </h1>
+          <label class="formlabel" for="location"> Enter Location: </label>
+          <input type="text" id="location" name="Location" size="30" maxlength="30" data-rule-required="true" data-msg-required="Location is Required"><br>
+          <input type="button" value="DiscplayTemp" id="DisplayTemp"></b>
+          <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
+        </div>
+      </form>
 </section>
       <footer id="bottom">
         <figure>
