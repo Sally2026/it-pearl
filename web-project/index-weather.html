@@ -40,15 +40,17 @@
     </header>
     <section id="content" class="container">
       <form id="myform">
-        <div class="formcontainer">
-          <h1> Location Temperture  </h1>
+        <div class="formcontanier">
+          <h1> Location Temperture </h1>
           <label class="formlabel" for="location"> Enter Location: </label>
           <input type="text" id="location" name="Location" size="30" maxlength="30" data-rule-required="true" data-msg-required="Location is Required"><br>
-          <input type="button" value="DiscplayTemp" id="DisplayTemp"></b>
-          <input type="button" value="Clear" id="Clear" name="Clear" onclick="ClearForm();">
+          <input type="button" value="DiscplayTemp" id="DisplayTemp">
+          <input type="button" value="Clear" id="Clear" name="Clear" onclick="clearForm();">
         </div>
       </form>
-</section>
+      <div id="forecast-table"></div> 
+      <canvas id="forecast-chart"></canvas>
+    </section>
       <footer id="bottom">
         <figure>
           <img src="assets/img/logo-3.png" alt="Central Park logo" />
