@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="assets/js/script.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,15 +42,18 @@
     <section id="content" class="container">
       <form id="myform">
         <div class="formcontanier">
-          <h1> Location Temperture </h1>
+          <h1> Weather Forecast </h1>
           <label class="formlabel" for="location"> Enter Location: </label>
-          <input type="text" id="location" name="Location" size="30" maxlength="30" data-rule-required="true" data-msg-required="Location is Required"><br>
+          <input type="text" id="location" name="Location" size="30" maxlength="30" value="New York" data-rule-required="true" data-msg-required="Location is Required"><br>
           <input type="button" value="DiscplayTemp" id="DisplayTemp">
           <input type="button" value="Clear" id="Clear" name="Clear" onclick="clearForm();">
         </div>
       </form>
-      <div id="forecast-table"></div> 
-      <canvas id="forecast-chart"></canvas>
+      <div id="location-info"></div>
+      <div id="forecast-container">
+        <div id="forecast-table"></div>
+        <canvas id="forecast-chart"></canvas>
+      </div>
     </section>
       <footer id="bottom">
         <figure>
