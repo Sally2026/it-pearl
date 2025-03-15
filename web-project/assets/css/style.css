@@ -39,6 +39,7 @@ header.primary {
 
 header.primary img{
   height: 90px;
+  
 } 
 
 header.primary figure {
@@ -165,6 +166,9 @@ header.primary a:hover {
   grid-column: 1 / 2;
   gap: 20px;
 }
+
+/*  --------------- Form -----------------  */
+
 
 /*  --------------- Temp Form -----------------  */
 .formcontainer {
