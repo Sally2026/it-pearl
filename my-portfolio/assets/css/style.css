@@ -1,0 +1,59 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+img{
+  max-width: 100%;
+}
+
+/*---------------- Utility Classes ----------------*/
+
+body{
+    background: #000;
+}
+
+.logo{
+    color:#fff;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pink{
+    color:#C43461;
+    font-family: "Crimson Text", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.primary ul{
+    display: flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+    font-family: "Crimson Text", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.3rem;
+    margin-top: -60px;
+}
+
+.container nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.container nav ul li a:hover{
+    text-decoration: underline;
+    color: #fff;
+}
+
+.contact{
+    text-decoration: none; 
+    color: #fff;
+    border: 2px solid #C43461;
+    border-radius: 16px;
+    padding: 5px 10px;
+}
+
