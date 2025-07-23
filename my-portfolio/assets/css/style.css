@@ -1,32 +1,132 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-img{
+img {
   max-width: 100%;
 }
 
+/*---------------- Animation ----------------*/
+.primary,
+.nav-links ul li,
+.intro,
+.first-name,
+.last-name,
+.profile img,
+p,
+.related-links li{
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Fade-in animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header fade-in */
+.primary {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Logo appears slightly earlier */
+.logo,
+.pink {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.4s;
+}
+
+/* Nav links with proper staggered timing */
+.nav-links ul li {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+.nav-links ul li:nth-child(1) {
+  animation-delay: 0.6s;
+}
+.nav-links ul li:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.nav-links ul li:nth-child(3) {
+  animation-delay: 1s;
+}
+.nav-links ul li:nth-child(4) {
+  animation-delay: 1.2s;
+}
+.nav-links ul li:nth-child(5) {
+  animation-delay: 1.4s;
+}
+
+/* Content fade-in */
+.container{
+    animation: fadeInUp 0.8s ease-out forwards;
+    animation-fill-mode: forwards;
+}
+
+.intro {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 2.0s;
+}
+
+.first-name,
+.last-name {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 2.6s;
+}
+
+.profile img {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 3.4s;
+}
+
+p {
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 4.0s;
+}
+
+.related-links li {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.related-links li:nth-child(1) {
+  animation-delay: 4.6s;
+}
+.related-links li:nth-child(2) {
+  animation-delay: 4.8s;
+}
+.related-links li:nth-child(3) {
+  animation-delay: 5.0s;
+}
+
+
 /*---------------- Nav ----------------*/
 
-body{
-    background: #000;
-    margin: 0;
+body {
+  background: #000;
+  margin: 0;
 }
 
-.logo{
-    color:#fff;
-    font-family: "Pacifico", cursive;
-    font-weight: 400;
-    font-style: normal;
+.logo {
+  color: #fff;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.pink{
-    color:#C43461;
-    font-family: "Crimson Text", serif;
-    font-weight: 600;
-    font-style: normal;
+.pink {
+  color: #c43461;
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  font-style: normal;
 }
 
 .primary {
@@ -38,74 +138,117 @@ body{
   gap: 20px;
 }
 
-.nav-links ul{
-    display: flex;
-    flex-direction:row;
-    justify-content:space-evenly;
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.3rem;
-    gap: 120px;
+.nav-links ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.3rem;
+  gap: 120px;
 }
 
-.primary nav ul li a{
-    text-decoration: none;
-    color: #fff;
+.primary nav ul li a {
+  text-decoration: none;
+  color: #fff;
 }
 
-.primary nav ul li a:hover{
-    text-decoration: underline;
-    color: #fff;
+.primary nav ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
-.contact{
-    text-decoration: none; 
-    color: #fff;
-    border: 2px solid #C43461;
-    border-radius: 16px;
-    padding: 5px 10px;
+.contact {
+  text-decoration: none;
+  color: #fff;
+  border: 2px solid #c43461;
+  border-radius: 16px;
+  padding: 5px 10px;
 }
 
-.contact:hover{
-    background-color: #C43461;
-    color: #fff;
-    transition: 0.3s ease-in-out;
+.contact:hover {
+  background-color: #c43461;
+  color: #fff;
+  transition: 0.3s ease-in-out;
 }
 
 /*---------------- Content ----------------*/
 
 .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
-    padding-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .blog-post {
-    color: #fff;
-    font-family: "Caprasimo", serif;
-    font-size: 1.5rem;
-    line-height: 0.2;
-} 
+  color: #fff;
+  font-family: "Caprasimo", serif;
+  font-size: 1.5rem;
+  line-height: 0.2;
+}
 
-.intro{
-    padding-top: 60px;
+.intro {
+  padding-top: 60px;
 }
 
 .first-name {
-    font-size: 3.8rem;
-    color: #C43461;
+  font-size: 3.8rem;
+  color: #c43461;
 }
 
 .last-name {
-    font-size: 3.8rem;
-    color: #fff;
+  font-size: 3.8rem;
+  color: #fff;
 }
 
-.profile img{
-    width: 490px;
+.profile img {
+  width: 490px;
+}
+/*---------------- typewriter----------------*/
+.cursor {
+  display: inline-block;
+  color: #C43461;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#text {
+  color: #C43461;
+  font-family: "Charm", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+/*---------------- Icons ----------------*/
+
+.icons{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.related-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin-right: 15px;
+}
+
+.related-links a {
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.related-links a:hover {
+  color: #c43461;
 }
