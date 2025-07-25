@@ -10,102 +10,7 @@ img {
   max-width: 100%;
 }
 
-/*---------------- Animation ----------------*/
-.primary,
-.nav-links ul li,
-.intro,
-.first-name,
-.last-name,
-.profile img,
-p,
-.related-links li{
-  opacity: 0;
-  transform: translateY(20px);
-}
 
-/* Fade-in animation */
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Header fade-in */
-.primary {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.2s;
-}
-
-/* Logo appears slightly earlier */
-.logo,
-.pink {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.4s;
-}
-
-/* Nav links with proper staggered timing */
-.nav-links ul li {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-fill-mode: forwards;
-}
-
-.nav-links ul li:nth-child(1) {
-  animation-delay: 0.6s;
-}
-.nav-links ul li:nth-child(2) {
-  animation-delay: 0.8s;
-}
-.nav-links ul li:nth-child(3) {
-  animation-delay: 1s;
-}
-.nav-links ul li:nth-child(4) {
-  animation-delay: 1.2s;
-}
-.nav-links ul li:nth-child(5) {
-  animation-delay: 1.4s;
-}
-
-/* Content fade-in */
-.container{
-    animation: fadeInUp 0.8s ease-out forwards;
-    animation-fill-mode: forwards;
-}
-
-.intro {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 2.0s;
-}
-
-.first-name,
-.last-name {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 2.6s;
-}
-
-.profile img {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 3.4s;
-}
-
-p {
-  animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 4.0s;
-}
-
-.related-links li {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.related-links li:nth-child(1) {
-  animation-delay: 4.6s;
-}
-.related-links li:nth-child(2) {
-  animation-delay: 4.8s;
-}
-.related-links li:nth-child(3) {
-  animation-delay: 5.0s;
-}
 
 
 /*---------------- Nav ----------------*/
@@ -207,7 +112,18 @@ body {
 }
 
 .profile img {
-  width: 490px;
+  width: 270px;
+  margin-left: 140px;
+}
+
+.description {
+  color: #fff;
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  line-height: 1.5;
 }
 /*---------------- typewriter----------------*/
 .cursor {
