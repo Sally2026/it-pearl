@@ -32,3 +32,43 @@ document.addEventListener("DOMContentLoaded", () => {
 
   typeEffect(); // Start the typing effect
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const skillsSection = document.querySelector(".skills");
+  const skillBars = [
+    { id: "skill-html", percentage: 90 },
+    { id: "skill-css", percentage: 80 },
+    { id: "skill-js", percentage: 55 }
+  ];
+
+  let hasAnimated = false;
+
+  function animateSkillBars() {
+    if (hasAnimated) return;
+    if (isElementInViewport(skillsSection)) {
+      skillBars.forEach((skill) => {
+        const elem = document.getElementById(skill.id);
+        let width = 0;
+        const interval = setInterval(() => {
+          if (width >= skill.percentage) {
+            clearInterval(interval);
+          } else {
+            width++;
+            elem.style.width = width + "%";
+          }
+        }, 10);
+      });
+      hasAnimated = true;
+    }
+  }
+
+  function isElementInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+      rect.top <= window.innerHeight - 100 &&
+      rect.bottom >= 0
+    );
+  }
+
+  window.addEventListener("scroll", animateSkillBars);
+});

@@ -10,28 +10,11 @@ img {
   max-width: 100%;
 }
 
-
-
-
 /*---------------- Nav ----------------*/
 
 body {
   background: #000;
   margin: 0;
-}
-
-.logo {
-  color: #fff;
-  font-family: "Pacifico", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.pink {
-  color: #c43461;
-  font-family: "Crimson Text", serif;
-  font-weight: 600;
-  font-style: normal;
 }
 
 .primary {
@@ -167,4 +150,61 @@ body {
 
 .related-links a:hover {
   color: #c43461;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: #c43461;
+  margin: 20px 20px;
+}
+
+/*---------------- Skills ----------------*/
+.skills h2 {
+  color: #fff;
+  font-family: "Caprasimo", serif;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.skills-container {
+  text-align: right;
+  padding-left: 160px;
+  color: white;
+  margin-left: 160px;
+}
+
+.skills p{
+  color: #fff;
+  font-family: "Crimson Text", serif;
+  font-size: 1.2rem;
+  text-align: left;
+}
+.skill-bar {
+  background-color: #ddd;
+  border-radius: 8px;
+  width: 60%;
+  overflow: hidden;
+  margin: 10px 20px;
+}
+
+#skill-html {width: 90%; background-color: #c43461;}
+#skill-css {width: 80%; background-color: #c43461;}
+#skill-js {width: 65%; background-color: #c43461;}
+
+/*---------------- Portfolio ----------------*/
+
+.portfolio h2 {
+  color: #fff;
+  font-family: "Caprasimo", serif;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.portfolio hr {
+  border: none;
+  height: 1px;
+  background-color: #c43461;
+  margin: 20px 400px;
 }
